@@ -27,7 +27,7 @@ Utilize o github da Professora Milena Faria ate o passo 3:
 # 📥 1. Clone este repositório
 
 	git clone https://github.com/Roberta-Tavares/Ros2-OpenCV.git
-	cd Ros2-OpenCV
+	cd ros2-opencv
 
 # 🛠️ 2. Construa a imagem Docker
 
