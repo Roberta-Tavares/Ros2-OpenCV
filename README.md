@@ -24,22 +24,22 @@ Utilize o github da Professora Milena Faria ate o passo 3:
 	https://github.com/milenafariap/ros2_workshop
 
 	
-# 📥 4. Clone este repositório
+# 📥 1. Clone este repositório
 
 	git clone https://github.com/Roberta-Tavares/Ros2-OpenCV.git
 	cd Ros2-OpenCV
 
-# 🛠️ 5. Construa a imagem Docker
+# 🛠️ 2. Construa a imagem Docker
 
 	docker build -t ros2_opencv .
 
-# 🖥️ 6. Configure acesso gráfico (X11)
+# 🖥️ 3. Configure acesso gráfico (X11)
 
 No terminal do host:
 
 	xhost +local:docker
 
-# 🧱 7. Execute o contêiner
+# 🧱 4. Execute o contêiner
 
 	docker run -it --rm \
 	--name ros2_opencv_container \
@@ -50,12 +50,12 @@ No terminal do host:
 	--network host \
 	ros2_opencv
 
-# 🧪 8. Compilar dentro do container
+# 🧪 5. Compilar dentro do container
    
 	cd /root/workshop_assets
 	colcon build
 
-# ▶️ 9. Rodar simulação (launch)
+# ▶️ 6. Rodar simulação (launch)
 
 	source install/setup.bash
 	ros2 launch explore_world gazebo_with_bridge.launch.py
