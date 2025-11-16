@@ -27,7 +27,7 @@ Este repositório contém um ambiente de simulação ROS 2 integrado com o Gazeb
 
 🪛 2. Instale dependências
 
-	sudo apt install -y curl git gnupg2 lsb-release ca-certificates
+	sudo apt install -y curl git gnupg2 lsb-release ca-certificates software-properties-common
 
 🐋 3. Instale o Docker
 
