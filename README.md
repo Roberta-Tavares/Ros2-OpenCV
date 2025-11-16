@@ -19,68 +19,9 @@ Este repositório contém um ambiente de simulação ROS 2 integrado com o Gazeb
 
 
 
-# 🛠️ Como Rodar (Ubuntu 20.04/22.04 limpo)
+Utilize o github da Professora Milena Faria ate o passo :
 
-🪛 1. Atualize o sistema
-
-	sudo apt update && sudo apt upgrade -y
-
-🪛 2. Instale dependências
-
-	sudo apt install -y curl git gnupg2 lsb-release ca-certificates software-properties-common
-
-🐋 3. Instale o Docker
-
-	curl -fsSL https://get.docker.com -o get-docker.sh
-	sudo sh get-docker.sh
-
-
-Adicione seu usuário ao grupo docker:
-
-	sudo usermod -aG docker $USER
-	newgrp docker
-
-Verifique:
-
-	docker --version
-
-# 📥 4. Clone este repositório
-
-	git clone https://github.com/Roberta-Tavares/Ros2-OpenCV.git
-	cd ros2-opencv
-
-# 🛠️ 5. Construa a imagem Docker
-
-	docker build -t ros2_opencv .
-
-# 🖥️ 6. Configure acesso gráfico (X11)
-
-No terminal do host:
-
-	xhost +local:docker
-
-# 🧱 7. Execute o contêiner
-
-
-	docker run -it --rm \
-	--name Ros2_OpenCV_container \
-	-v ~/Ros2-OpenCV/workshop_assets:/root/workshop_assets \
-	-e IGN_GAZEBO_RESOURCE_PATH=/root/workshop_assets/world:/root/workshop_assets/assets \
-	-e GAZEBO_MODEL_PATH=/root/workshop_assets/assets/models \
-	-e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix \
-	--network host \
-	ros2_opencv
-
-
-# 🧪 8. Compilar dentro do container
-   
-	cd /root/workshop_assets
-	colcon build
-
-# ▶️ 9. Rodar simulação (launch)
-
-	source install/setup.bash
-	ros2 launch explore_world gazebo_with_bridge.launch.py
+	https://github.com/milenafariap/ros2_workshop
 
 # ➡️ Após isso:
 
