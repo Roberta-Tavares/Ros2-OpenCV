@@ -43,12 +43,13 @@ No terminal do host:
 
 	docker run -it --rm \
 	--name ros2_opencv_container \
-	-v ~/Ros2-OpenCV/workshop_assets:/root/workshop_assets \
-	-e IGN_GAZEBO_RESOURCE_PATH=/root/workshop_assets/world:/root/workshop_assets/assets \
+	-v ~/ros2-opencv/workshop_assets:/root/workshop_assets \
+	-e IGN_GAZEBO_RESOURCE_PATH=/root/workshop_assets/assets/world:/root/workshop_assets/assets \
 	-e GAZEBO_MODEL_PATH=/root/workshop_assets/assets/models \
 	-e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix \
 	--network host \
 	ros2_opencv
+
 
 # 🧪 5. Compilar dentro do container
    
