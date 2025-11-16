@@ -47,11 +47,11 @@ Verifique:
 # 📥 4. Clone este repositório
 
 	git clone https://github.com/Roberta-Tavares/Ros2-OpenCV.git
-	cd Ros2-OpenCV
+	cd ros2-opencv
 
 # 🛠️ 5. Construa a imagem Docker
 
-	docker build -t Ros2_OpenCV .
+	docker build -t ros2_opencv .
 
 # 🖥️ 6. Configure acesso gráfico (X11)
 
@@ -63,12 +63,12 @@ No terminal do host:
 
 	docker run -it --rm \
 	--name Ros2_OpenCV_container \
-	-v ~/Ros2-OpenCV/workshop_assets:/root/workshop_assets \
+	-v ~/ros2-opencv/workshop_assets:/root/workshop_assets \
 	-e IGN_GAZEBO_RESOURCE_PATH=/root/workshop_assets/world:/root/workshop_assets/assets \
 	-e GAZEBO_MODEL_PATH=/root/workshop_assets/assets/models \
 	-e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix \
 	--network host \
-	Ros2_OpenCV
+	ros2_opencv
 
 # 🧪 8. Compilar dentro do container
    
