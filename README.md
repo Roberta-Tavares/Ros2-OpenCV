@@ -19,7 +19,7 @@ Este repositório contém um ambiente de simulação ROS 2 integrado com o Gazeb
 
 
 
-Utilize o github da Professora Milena Faria ate o passo :
+Utilize o github da Professora Milena Faria ate o passo 9:
 
 	https://github.com/milenafariap/ros2_workshop
 
