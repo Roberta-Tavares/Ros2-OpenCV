@@ -67,7 +67,7 @@ No terminal do host:
 📌 Você usa outra aba de terminal para rodar comandos ROS dentro do container
 
 
-# 🤖 Testes de Tópicos, Sensores e Movimentação
+## 🤖 Testes de Tópicos, Sensores e Movimentação
 
 📌 Abrir o Docker em outro terminal
 Consultar o nome do container:
@@ -91,7 +91,7 @@ Acessar o container:
 	ros2 topic echo /camera/image_raw
 	
 
-# 🔧Executando os Scripts com OpenCV em Outro Container
+## 🔧Executando os Scripts com OpenCV em Outro Container
 
 
 Após abrir o Gazebo e garantir que o robô está funcionando, para rodar qualquer script que utilize OpenCV, como o visao.py, siga os passos abaixo em outro container:
