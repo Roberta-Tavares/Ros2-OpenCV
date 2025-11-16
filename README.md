@@ -19,9 +19,46 @@ Este repositório contém um ambiente de simulação ROS 2 integrado com o Gazeb
 
 
 
-Utilize o github da Professora Milena Faria ate o passo 9:
+Utilize o github da Professora Milena Faria ate o passo 3:
 
 	https://github.com/milenafariap/ros2_workshop
+
+	
+# 📥 4. Clone este repositório
+
+	git clone https://github.com/Roberta-Tavares/Ros2-OpenCV.git
+	cd Ros2-OpenCV
+
+# 🛠️ 5. Construa a imagem Docker
+
+	docker build -t ros2_opencv .
+
+# 🖥️ 6. Configure acesso gráfico (X11)
+
+No terminal do host:
+
+	xhost +local:docker
+
+# 🧱 7. Execute o contêiner
+
+	docker run -it --rm \
+	--name ros2_opencv_container \
+	-v ~/Ros2-OpenCV/workshop_assets:/root/workshop_assets \
+	-e IGN_GAZEBO_RESOURCE_PATH=/root/workshop_assets/world:/root/workshop_assets/assets \
+	-e GAZEBO_MODEL_PATH=/root/workshop_assets/assets/models \
+	-e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix \
+	--network host \
+	ros2_opencv
+
+# 🧪 8. Compilar dentro do container
+   
+	cd /root/workshop_assets
+	colcon build
+
+# ▶️ 9. Rodar simulação (launch)
+
+	source install/setup.bash
+	ros2 launch explore_world gazebo_with_bridge.launch.py
 
 # ➡️ Após isso:
 
